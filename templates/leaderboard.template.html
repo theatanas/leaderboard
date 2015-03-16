@@ -1,0 +1,32 @@
+<template name="leaderboard">
+    Hey World! Whatup.
+    Test.
+
+    <!-- This #each block needs to be within the leaderboard template,
+    otherwise it won't work -->
+    <ul>
+        {{#each player}}
+            <li class="player {{selectedClass}}">
+                <span class="name">{{name}}</span> has {{score}} pts.
+            </li>
+        {{/each}}
+        {{#if showSelectedPlayer}}
+            <li><h4>Selected Player: {{showSelectedPlayer.name}}</h4></li>
+        {{/if}}
+    </ul>
+
+    {{#if showSelectedPlayer}}
+        <input type="button" class="increment" value="Give 1 Point">
+        <input type="button" class="decrement" value="Take 1 Point">
+
+        <p>
+            <input type="button" class="remove" value="Remove Player">
+        </p>
+
+    {{/if}}
+
+    <h3>Add a new player</h3>
+
+    {{>addPlayerForm}}
+
+</template>

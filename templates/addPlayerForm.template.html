@@ -1,0 +1,13 @@
+<template name="addPlayerForm">
+
+    {{#if currentUser}}
+        <form>
+            <label for="playerName" class="playerLabel" style="display: none;">Enter valid data</label>
+            <br>
+            <input type="text" name="playerName" placeholder="Name">
+            <input type="number" name="playerScore" placeholder="Score">
+            <input type="submit" value="Add Player">
+        </form>
+    {{/if}}
+
+</template>

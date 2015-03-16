@@ -1,0 +1,8 @@
+/* CSS declarations go here */
+.selected {
+    background-color: #0fa;
+}
+
+.name:hover {
+    cursor: pointer;
+}
